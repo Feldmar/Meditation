@@ -23,18 +23,30 @@ header
             &:hover
                 font-size: 25px
                 color: $green
+                text-shadow: 5px 5px 19px rgba(91, 203, 138, 1)
+                transition-duration: .5s
             & span
-                padding-top: 30%
+                padding-top: 35%
             & .border
-                display: none
+                visibility: hidden
                 width: 125px
                 height: 10px
                 border-radius: 50px 50px 0 0
                 background-color: $green
             &:hover
                 & .border
-                    display: flex
-                        
-                // display: none
-            &:hover
-                
+                    visibility: visible
+                    animation: swing 2s ease-in
+@keyframes swing
+  15%
+    transform: translateX(8px)
+  30%
+    transform: translateX(-8px)
+  40%
+    transform: translateX(6px)
+  50%
+    transform: translateX(-6px)
+  65%
+    transform: translateX(2px)
+  100%
+    transform: translateX(0)
