@@ -1,19 +1,19 @@
 .bubbly-button
   font-family: $font-heebo
   display: inline-block
-  font-size: 20px
-  padding: 10px 45px 10px 45px
+  font-size: 25px
+  font-weight: 800
+  padding: 15px 65px 15px 65px
   appearance: none
   background-color: $green
   color: #fff
   opacity: 0.7
-  border-radius: 25px
+  border-radius: 39px
   border: none
-  left: 50%
   cursor: pointer
   position: relative
   transition: transform ease-in 0.1s, box-shadow ease-in 0.25s
-  box-shadow: 0 2px 25px rgba(185, 197, 74, 0.63)
+ 
   &:focus
     outline: 0
   &:before, &:after
@@ -63,3 +63,7 @@
   100%
     background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%
     background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%
+@media screen and (max-width: 576px)
+  .bubbly-button
+    font-size: 20px
+    padding: 15px 45px 15px 45px
