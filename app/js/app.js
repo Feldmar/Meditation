@@ -2,27 +2,51 @@
 
 // require('~/app/libs/mmenu/js/jquery.mmenu.all.min.js') // import vendor jQuery plugin example (not module)
 
-document.addEventListener('DOMContentLoaded', () => {
-	
-	const testBtn = document.querySelector('#test');
-	const testBtn2 = document.querySelector('#test2');
-	const content = document.querySelector('.content');
+function scrollTo(to, duration = 700) {
+    const
+        element = document.scrollingElement || document.documentElement,
+        start = element.scrollTop,
+        change = to - start,
+        startDate = +new Date(),
+        // t = current time
+        // b = start value
+        // c = change in value
+        // d = duration
+        easeInOutQuad = function (t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return c / 2 * t * t + b;
+            t--;
+            return -c / 2 * (t * (t - 2) - 1) + b;
+        },
+        animateScroll = function () {
+            const currentDate = +new Date();
+            const currentTime = currentDate - startDate;
+            element.scrollTop = parseInt(easeInOutQuad(currentTime, start, change, duration));
+            if (currentTime < duration) {
+                requestAnimationFrame(animateScroll);
+            }
+            else {
+                element.scrollTop = to;
+            }
+        };
+    animateScroll();
+}
 
-	console.log(content);
-	testBtn.addEventListener('click', function(e) {
-		if (!e.isTrusted) return;
-		// console.log(e);
-		content.innerHTML = `<div>1</div>
-		<div>2</div>
-		<div>3</div>
-		<div>4</div>
-		<div>5</div> `;
-	})
-	testBtn2.addEventListener('click', function(e) {
-		if (!e.isTrusted) return;
-		// console.log(e);
-		content.innerHTML = ``;
-	})
-	
-	
-})
+document.addEventListener('DOMContentLoaded', function () {
+    let btn = document.querySelector('#toTop');
+    window.addEventListener('scroll', function () {
+        // Если прокрутили дальше 599px, показываем кнопку
+        if (pageYOffset > 100) {
+            btn.classList.add('show');
+            // Иначе прячем
+        } else {
+            btn.classList.remove('show');
+        }
+    });
+
+    // При клике прокручиываем на самый верх
+    btn.onclick = function (click) {
+        click.preventDefault();
+        scrollTo(0, 400);
+    }
+});
