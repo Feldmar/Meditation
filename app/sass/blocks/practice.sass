@@ -1,0 +1,59 @@
+.practice-background
+    background-image: url(../images/backgroundpar.png)
+    background-repeat: no-repeat
+    background-position: right center
+.practice
+    padding-top: 50px
+    display: flex
+    flex-direction: column
+    &__title
+        padding-bottom: 15px
+        font-family: $font-merienda
+        font-size: 35px
+        display: flex
+        justify-content: center
+        text-align: center
+    &__desc
+        font-family: $font-heebo
+        display: flex
+        justify-content: center
+        text-align: center
+        color: #6b6a6a
+    &__block
+        padding-top: 30px
+        display: flex
+        align-items: center
+        flex-direction: row
+    &__left
+        width: 50%
+        cursor: pointer
+        & img
+            width: 85%
+        &:hover
+            filter: drop-shadow(30px -5px 0px white)      
+    &__right
+        width: 50%
+    &__info
+        padding-left: 20px
+        padding-bottom: 15%
+        &-title
+            padding-bottom: 10px
+            font-size: 25px
+            font-weight: bold
+            font-family: $font-heebo
+            padding-top: 20px
+        &-desc
+            font-family: $font-heebo
+            width: 80%
+        &:hover
+            background-image: url(../images/subtractpr.png)
+            background-size: 90%
+            background-repeat: no-repeat
+            opacity: 0.7
+            &:after
+                content: url(../images/arrowpr.png)
+                position: absolute
+                right: 15%
+            
+                    
+
