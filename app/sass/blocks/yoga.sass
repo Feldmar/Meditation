@@ -49,3 +49,51 @@
         height: 25%
     &__btn
         padding-top: 20px
+@media screen and (max-width: 992px)
+    .yoga
+        flex: 100%
+        flex-wrap: wrap
+        flex-direction: row
+        justify-content: center
+        &__left
+            order: 1
+            width: 50%
+        &__center
+            order: 3
+            width: 50%
+        &__right
+            order: 2
+            width: 50%
+@media screen and (max-width: 768px)
+    .yoga
+        flex-direction: column
+        &__left
+            width: 100%
+            height: 650px
+        &__center
+            width: 100%
+            height: 650px
+        &__right
+            width: 100% 
+            height: 650px
+        &__image
+            padding-top: 50px
+@media screen and (max-width: 576px)
+    .yoga
+        align-content: center
+        &__image
+            width: 50px
+        &__desc
+            font-size: 13px
+        &__left
+            width: 320px
+            height: 400px
+        &__center
+            width: 300px
+            height: 420px
+        &__right
+            width: 320px
+            height: 400px
+
+     
+        
