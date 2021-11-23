@@ -29,10 +29,11 @@
         width: 50%
         cursor: pointer
         transition: 2s
+        animation: pulsing 6s infinite
         & img
             width: 85%
         &:hover
-            filter: drop-shadow(30px -5px 0px white)      
+            filter: drop-shadow(30px -5px 0px white)
     &__right
         width: 50%
     &__info
@@ -58,6 +59,13 @@
                 content: url(../images/arrowpr.png)
                 position: absolute
                 right: 15%
+@keyframes pulsing
+  0%
+    transform: scale(0.7, 0.7)
+  50%
+    transform: scale(1.0, 1.0)
+  100%
+    transform: scale(0.7, 0.7)
 @media screen and (max-width: 1200px)
     .practice
         &__left
