@@ -4,11 +4,83 @@
     background-repeat: no-repeat
     background-position: center center
 .meditation
+    display: flex
+    flex-direction: column
+    padding-top: 70px
+    padding-bottom: 70px
+    &__block
+        display: flex
+        justify-content: space-between
+    &__top
+        display: flex
+        flex-direction: column
+        align-items: center
+        text-align: center
+        padding-bottom: 30px
+        &-title
+            font-family: $font-merienda
+            font-size: 35px
+            font-weight: normal
+        &-desc
+            font-family: $font-heebo
+            font-size: 15px
+            color: $green
+            font-weight: bold
     &__left
+        text-align: right
+        flex-direction: column
+        display: flex
+        width: 33%
+        justify-content: space-between
+        &-title
+            padding-bottom: 10px
+            font-size: 20px
+            font-family: $font-heebo
+            font-weight: 800
+        &-desc
+            font-family: $font-heebo
+            color: $green
         &-unit
+            padding: 20px
+            height: 25%
             background-image: url('/images/meditleft.png')
             background-repeat: no-repeat
+            background-size: 100% 100%
     &__right
+        flex-direction: column
+        display: flex
+        width: 33%
+        justify-content: space-between
+        &-title
+            padding-bottom: 10px
+            font-size: 20px
+            font-family: $font-heebo
+            font-weight: 800
+        &-desc
+            font-family: $font-heebo
+            color: $green
         &-unit
+            height: 25%
+            padding: 20px
             background-image: url('/images/meditright.png')
             background-repeat: no-repeat
+            background-size: 100% 100%
+    &__center
+        width: 25%
+        & img
+            width: 85%
+            margin: 0
+@media screen and (max-width: 1200px)
+    .meditation
+        &__center
+        &__right
+            &-title
+                font-size: 17px
+            &-unit
+                height: 32%
+        &__left
+            &-title
+                font-size: 17px
+            &-unit
+                height: 32%
+

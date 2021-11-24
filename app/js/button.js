@@ -13,4 +13,4 @@ let animateButton = function(e) {
   
   for (let i = 0; i < bubblyButtons.length; i++) {
     bubblyButtons[i].addEventListener('click', animateButton, false);
-  }
+  };
