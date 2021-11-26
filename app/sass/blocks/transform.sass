@@ -1,0 +1,38 @@
+.transform
+    padding-top: 50px
+    display: grid
+    align-items: center
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: 0.3fr 1fr 1fr
+    gap: 50px 100px
+    grid-auto-flow: row
+    grid-template-areas: "transform__top transform__top" "transform__one transform__sec" "transfom__three transform__four"
+    &__top
+        grid-area: transform__top
+        text-align: center
+        &-title
+            font-family: $font-merienda
+            font-size: 35px
+            font-weight: normal
+            padding-bottom: 20px
+        &-desc
+            font-family: $font-heebo
+            color: #777
+    &__one
+        grid-area: transform__one
+    &__sec
+        grid-area: transform__sec
+    &__three
+        grid-area: transfom__three
+    &__four
+        grid-area: transform__four
+    &-background
+        background-image: url('/images/transbck.png')
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center center
+    &__desc
+        font-family: $font-heebo
+    &__title
+        font-family: $font-heebo
+

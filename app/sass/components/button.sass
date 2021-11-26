@@ -12,10 +12,10 @@
   border: none
   cursor: pointer
   position: relative
-  transition: transform ease-in 0.1s, box-shadow ease-in 0.25s
+  transition: transform ease-in 0.1s, box-shadow ease-in 
   &:hover
-    background-color: #3CB371
-    box-shadow: 2px 2px 21px 11px rgba(81, 211, 81, 0.47)
+    background-color: #25a890
+    box-shadow: 2px 2px 15px 11px #4fb19f
   &:focus
     outline: 0
   &:before, &:after
@@ -31,12 +31,12 @@
   &:before
     display: none
     top: -75%
-    background-image: radial-gradient(circle, #73ff00 20%, transparent 20%), radial-gradient(circle, transparent 20%, #51ff00 20%, transparent 30%), radial-gradient(circle, #73ff00 20%, transparent 20%), radial-gradient(circle, #51ff00 20%, transparent 20%), radial-gradient(circle, transparent 10%, #51ff00 15%, transparent 20%), radial-gradient(circle, #5eff00 20%, transparent 20%), radial-gradient(circle, #48ff00 20%, transparent 20%), radial-gradient(circle, #73ff00 20%, transparent 20%), radial-gradient(circle, #51ff00 20%, transparent 20%)
+    background-image: radial-gradient(circle, #229263 20%, transparent 20%), radial-gradient(circle, transparent 20%, #f8faf8 20%, transparent 30%), radial-gradient(circle, #45a86e 20%, transparent 20%), radial-gradient(circle, #f6f8f5 20%, transparent 20%), radial-gradient(circle, transparent 10%, #eaf3e6 15%, transparent 20%), radial-gradient(circle, #edf3e9 20%, transparent 20%), radial-gradient(circle, #48ff00 20%, transparent 20%), radial-gradient(circle, #f6f8f4 20%, transparent 20%), radial-gradient(circle, #2a8654 20%, transparent 20%)
     background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%
   &:after
     display: none
     bottom: -75%
-    background-image: radial-gradient(circle, #3fb128 20%, transparent 20%), radial-gradient(circle, #15ff00 20%, transparent 20%), radial-gradient(circle, transparent 10%, #15ff00 15%, transparent 20%), radial-gradient(circle, #73ff00 20%, transparent 20%), radial-gradient(circle, #a6ff00 20%, transparent 20%), radial-gradient(circle, #33ff00 20%, transparent 20%), radial-gradient(circle, #5eff00 20%, transparent 20%)
+    background-image: radial-gradient(circle, #28b188 20%, transparent 20%), radial-gradient(circle, #72c222 20%, transparent 20%), radial-gradient(circle, transparent 10%, #fbfdfb 15%, transparent 20%), radial-gradient(circle, #319256 20%, transparent 20%), radial-gradient(circle, #a6ff00 20%, transparent 20%), radial-gradient(circle, #f1f7f0 20%, transparent 20%), radial-gradient(circle, #f2f7f0 20%, transparent 20%)
     background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%
   &:active
     transform: scale(0.9)
@@ -45,12 +45,15 @@
   &.animate
     &:before
       display: block
-      animation: topBubbles ease-in-out 0.75s forwards
+      animation: topBubbles ease-in-out 0.85s forwards
     &:after
       display: block
-      animation: bottomBubbles ease-in-out 0.75s forwards
+      animation: bottomBubbles ease-in-out 0.85s forwards
 .yoga-btn
-  font-size: 15px       
+  font-size: 15px   
+.transform__btn
+  font-size: 15px
+  padding: 10px 25px 10px 25px
 @keyframes topBubbles
   0%
     background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%
