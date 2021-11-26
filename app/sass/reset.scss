@@ -7,10 +7,7 @@
     box-sizing: border-box;
   }
 }
-// html {
-//   margin-left: calc(100vw - 100%);
-//   margin-right: 0;
-// }
+
 /* Убираем внутренние отступы */
 
 ul[class], ol[class] {
@@ -72,9 +69,3 @@ input, button, textarea, select {
     scroll-behavior: auto !important;
   }
 }
-// @media screen and (min-width: 960px) {
-//   html {
-//     margin-left: calc(100vw - 100%);
-//     margin-right: 0;
-//   }
-// }
