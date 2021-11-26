@@ -6,7 +6,7 @@
     grid-template-rows: 0.3fr 1fr 1fr
     gap: 50px 100px
     grid-auto-flow: row
-    grid-template-areas: "transform__top transform__top" "transform__one transform__sec" "transfom__three transform__four"
+    grid-template-areas: "transform__top transform__top" "transform__one transform__sec" "transform__three transform__four"
     &__top
         grid-area: transform__top
         text-align: center
@@ -23,7 +23,7 @@
     &__sec
         grid-area: transform__sec
     &__three
-        grid-area: transfom__three
+        grid-area: transform__three
     &__four
         grid-area: transform__four
     &-background
@@ -33,6 +33,26 @@
         background-position: center center
     &__desc
         font-family: $font-heebo
+        padding-bottom: 30px
+        & p
+            width: 90%
     &__title
         font-family: $font-heebo
-
+        font-size: 25px
+        padding-bottom: 20px
+@media screen and (max-width:768px)
+    .transform
+        grid-template-areas: "transform__top"  "transform__one" "transform__sec" "transform__four" "transform__three" 
+        grid-template-columns: 1fr
+        grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr
+        gap: 20px 0px
+        &__sec
+            margin-left: 10px
+            margin-right: 10px
+        &__three
+            margin-left: 10px
+            margin-right: 10px
+            text-align: right
+        &__desc
+            & p
+                width: 100%
