@@ -41,11 +41,7 @@
             font-family: $font-heebo
             color: $green
         &-unit
-            padding: 20px
-            height: 25%
             background-image: url('/images/meditleft.png')
-            background-repeat: no-repeat
-            background-size: 100% 100%
     &__right
         flex-direction: column
         display: flex
@@ -60,29 +56,50 @@
             font-family: $font-heebo
             color: $green
         &-unit
-            height: 25%
-            padding: 20px
-            background-image: url('/images/meditright.png')
-            background-repeat: no-repeat
-            background-size: 100% 100%
+            background-image: url('/images/meditright.png') 
+    &-item
+        height: 25%
+        padding: 20px
+        background-repeat: no-repeat
+        background-size: 100% 100%
+        opacity: 0.8
+        filter: drop-shadow(0 0 0.75rem #35755a)
+        &:hover
+            opacity: 1
+            filter: drop-shadow(0 0 30px #e4e1e1)
     &__center
         width: 25%
         & img
             width: 85%
             margin: 0
+            filter: drop-shadow(.5rem .6rem 1rem #267e81)
+            animation: scalegirl 10s linear infinite
+@keyframes scalegirl
+    0%
+        transform: scaleX(1)
+    15%
+        transform: scaleX(0.95)
+    30%
+        transform: scaleX(-0.95)
+    45%
+        transform: scaleX(-1)
+    60%
+        transform: scaleX(-0.95)
+    75%
+        transform: scaleX(0.95)
+    100%
+        transform: scaleX(1)
 @media screen and (max-width: 1200px)
     .meditation
         &__center
         &__right
             &-title
                 font-size: 17px
-            &-unit
-                height: 32%
+        &-item
+            height: 32%
         &__left
             &-title
                 font-size: 17px
-            &-unit
-                height: 32%
 @media screen and (max-width: 992px)
     .meditation
         &__center
@@ -99,12 +116,10 @@
             flex-direction: column
         &__right
             width: 100%
-            &-unit
-                text-align: center
-                margin-bottom: 20px
+        &-item
+            text-align: center
+            margin-bottom: 20px
         &__left
             width: 100%
             &-unit
-                text-align: center
-                margin-bottom: 20px
                 background-image: url('/images/meditright.png')

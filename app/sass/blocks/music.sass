@@ -3,6 +3,7 @@
     background-size: 100% 100%
     background-repeat: no-repeat
     background-position: center center
+    
 .music
     padding-top: 50px
     &__track
@@ -13,15 +14,17 @@
         opacity: 0.7
         animation: ani 3s forwards
         transform: translateX(-150%)
+        &:hover
+            opacity: 1
         &-play
             position: relative
             width: 10%
             left: 53%
             top: -70px
             & img 
-                animation: none
+                animation: rotating 4s linear 0s infinite 
                 &:hover
-                   animation: rotating 4s linear 0s infinite 
+                  animation: none
         &-name
             font-family: $font-heebo
             font-size: 20px
@@ -54,19 +57,29 @@
         width: 50%
     &__right
         width: 50%
-
+        &:hover
+            animation: musicimg 4s linear infinite
 @keyframes rotating
   0%
     transform: rotate(0deg)
-
   100%
     transform: rotate(360deg)
 @keyframes ani
   0%
     transform: translateX(-150%)
-
   100%
     transform: translateY(0)
+@keyframes musicimg
+    0%
+        transform: translateX(30px)
+    25%
+        transform: translateX(-30px)
+    50%
+        transform: translateX(30px)
+    75%
+        transform: translateX(-30px)
+    100%
+        transform: translateX(30px)
 @media screen and (max-width: 1200px)
     .music
         &__track
@@ -74,6 +87,8 @@
                 width: 10%
                 top: -75px
 @media screen and (max-width: 992px)
+    .music-background
+        background-size: cover
     .music
         &__bottom
             flex-direction: column

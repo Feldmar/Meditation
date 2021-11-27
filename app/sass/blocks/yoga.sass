@@ -14,13 +14,14 @@
         background-size: cover
         margin: 0 auto
         background-repeat: no-repeat
-        // transition: background-color 2s, transform 3s
-        // &:hover
-        //     transform: scale(1.1)
+        transition: 2s
+        &:hover
+            filter: drop-shadow(4px 4px 10px #9c9c9c)
+            transition: 3s ease-out
+            transform: scale(1.1)
         &-left
             background-image: url('/images/subtract.png')
-            background-size: contain
-            
+            background-size: contain   
         &-center
             background-image: url('/images/subtract2.png')
             background-size: contain
