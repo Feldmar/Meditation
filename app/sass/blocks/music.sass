@@ -1,0 +1,104 @@
+.music-background
+    background-image: url('/images/backgroundmus.png')
+    background-size: 100% 100%
+    background-repeat: no-repeat
+    background-position: center center
+.music
+    padding-top: 50px
+    &__track
+        padding-bottom: 20px
+        background-image: url('/images/audio.png')
+        background-repeat: no-repeat
+        background-size: 75%
+        opacity: 0.7
+        animation: ani 3s forwards
+        transform: translateX(-150%)
+        &:hover
+            opacity: 1
+        &-play
+            position: relative
+            width: 10%
+            left: 53%
+            top: -70px
+            & img 
+                animation: rotating 4s linear 0s infinite 
+                &:hover
+                  animation: none
+        &-name
+            font-family: $font-heebo
+            font-size: 20px
+            font-weight: bold
+            padding: 10px
+        &-author
+            font-family: $font-heebo
+            padding: 10px
+    &__top
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding-bottom: 50px
+        &-title
+            text-align: center
+            font-family: $font-merienda
+            font-size: 35px
+            font-weight: normal
+        &-desc
+            font-family: $font-heebo
+            text-align: center
+            color: #808080
+    &__bottom
+        display: flex
+        align-items: center
+    &__left
+        display: flex
+        justify-content: space-evenly
+        flex-direction: column
+        width: 50%
+    &__right
+        width: 50%
+@keyframes rotating
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
+@keyframes ani
+  0%
+    transform: translateX(-150%)
+  100%
+    transform: translateY(0)
+@media screen and (max-width: 1200px)
+    .music
+        &__track
+            &-play
+                width: 10%
+                top: -75px
+@media screen and (max-width: 992px)
+    .music-background
+        background-size: cover
+    .music
+        &__bottom
+            flex-direction: column
+        &__left
+            width: 100%
+            order: 2
+        &__right
+            order: 1
+            width: 100%
+        &__track
+            background-size: 100%
+            &-play
+                width: 10%
+                left: 78%
+                top: -55px
+@media screen and (max-width: 576px)
+    .music
+        &__track
+            &-play
+                width: 12%
+                left: 78%
+                top: -50px
+            &-name
+                font-size: 18px
+                padding: 5px
+            &-author
+                padding: 5px

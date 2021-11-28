@@ -1,0 +1,96 @@
+header
+    height: 120px
+    background-color: $white
+    width: 100%
+.sticky
+    display: flex
+    width: 100%
+    position: fixed
+    top: 0
+    z-index: 99999
+    background-color: #fff
+.header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &__logo
+      & img
+        transition: 3s
+        &:hover
+          filter: drop-shadow(4px 4px 10px #00FF00)
+    &__navigation
+        display: flex
+        &-span
+            display: flex
+            font-family: $font-heebo
+            font-weight: 600
+            width: 125px
+            height: 120px
+            font-size: 21px
+            padding-right: 5px
+            padding-left: 5px
+            flex-direction: column
+            align-items: center
+            justify-content: space-between
+            &:hover
+                font-size: 25px
+                color: $green
+                text-shadow: 5px 5px 19px rgba(91, 203, 138, 1)
+                transition-duration: .5s
+            & span
+                padding-top: 35%
+            & .border
+                visibility: hidden
+                width: 125px
+                height: 10px
+                border-radius: 50px 50px 0 0
+                background-color: $green
+            &:hover
+                & .border
+                    visibility: visible
+                    animation: swing 2s ease-in
+@keyframes swing
+    15%
+      transform: translateX(8px)
+    30%
+      transform: translateX(-8px)
+    40%
+      transform: translateX(6px)
+    50%
+      transform: translateX(-6px)
+    65%
+      transform: translateX(2px)
+    100%
+      transform: translateX(0)
+@media screen and (max-width: 992px)
+    header
+      height: 70px
+    .header
+        flex-direction: column
+        &__navigation
+            display: none
+            background-color: #fff
+            z-index: 9999
+        &__logo
+            display: flex
+            justify-content: center
+            align-items: center
+            & img
+                width: 70px 
+    .hide
+        display: flex
+        justify-content: center
+        align-items: center
+    .sticky
+        display: flex
+        min-width: 100%
+        height: 70px
+        background-color: #ffffff
+        position: fixed
+        top: 0
+        z-index: 99999
+@media screen and (max-width: 768px)
+    .header
+        &__navigation
+            flex: 100% 
+            flex-wrap: wrap

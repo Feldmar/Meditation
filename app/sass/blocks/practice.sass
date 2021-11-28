@@ -1,0 +1,104 @@
+.practice-background
+    background-image: url(../images/backgroundpar.png)
+    background-repeat: no-repeat
+    background-position: right center
+.practice
+    position: relative
+    padding-top: 50px
+    display: flex
+    flex-direction: column
+    overflow: hidden
+    &__title
+        padding-bottom: 15px
+        font-family: $font-merienda
+        font-size: 35px
+        font-weight: normal
+        display: flex
+        justify-content: center
+        text-align: center
+    &__desc
+        font-family: $font-heebo
+        display: flex
+        justify-content: center
+        text-align: center
+        color: #6b6a6a
+    &__block
+        padding-top: 30px
+        display: flex
+        align-items: center
+        flex-direction: row
+    &__left
+        width: 50%
+        cursor: pointer
+        transition: 4s
+        & img
+            width: 85%
+        &:hover
+            filter: drop-shadow(30px -5px 0px white)
+            transition: 3s ease-out
+            transform: scale(1.1)
+    &__right
+        width: 50%
+        & a
+            text-decoration: none
+            color: #000
+    &__info
+        padding-left: 20px
+        padding-bottom: 15%
+        transition: 4s
+        opacity: 0.7
+        &-title
+            padding-bottom: 10px
+            font-size: 25px
+            font-weight: bold
+            font-family: $font-heebo
+            padding-top: 15px
+        &-desc
+            font-family: $font-heebo
+            font-size: 14px
+            font-weight: 400
+            width: 88%
+        &:hover
+            background-image: url(../images/subtractpr.png)
+            background-size: 90%
+            background-repeat: no-repeat
+            opacity: 0.9
+            filter: drop-shadow(0 2px 7px #9b9b9b80)
+            transition: 2s
+            transform: translate(20px)
+            &:after
+                content: url(../images/arrowpr.png)
+                position: absolute
+                right: 15%
+@media screen and (max-width: 1200px)
+    .practice
+        &__left
+            width: 40%
+        &__right
+            width: 60%
+@media screen and (max-width: 992px)
+    .practice
+        &__left
+            width: 100%
+            & img
+                width: 100%
+        &__right
+            width: 100%
+        &__block
+            padding-top: 30px
+            display: flex
+            align-items: center
+            flex-direction: column
+        &__info
+            &-title
+                padding-bottom: 5px
+                font-size: 23px
+                padding-top: 15px
+@media screen and (max-width: 576px)
+    .practice
+        &__info
+            &:hover
+                background: radial-gradient(farthest-side ellipse at top left, white, #ece9e9)
+                
+                    
+

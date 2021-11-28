@@ -1,0 +1,38 @@
+//fonts
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@200&family=Merienda+One&display=swap')
+$font-heebo: 'Heebo', sans-serif
+$font-merienda: 'Merienda One', cursive;
+// USER VARIABLES SECTION
+$xxl: 1320px
+$xl: 1140px
+$lg: 960px
+$md: 720px
+$sm: 540px
+$accent: rgba(0, 0, 0, 0.5)
+$green: #1A7F72
+$white: #FFFFFF
+$black: #000
+$background: #d4f5ef
+
+body
+    background-color: $background
+.wrapper
+    max-width: $xxl
+    margin: 0 auto
+@media(max-width: 1400px)
+    .wrapper
+        max-width: $xl
+@media(max-width: 1200px)
+    .wrapper
+        max-width: $lg
+@media(max-width: 992px)
+    .wrapper
+        max-width: $md
+@media(max-width: 768px)
+    .wrapper
+        max-width: $sm
+@media(max-width: 576px)
+    .wrapper
+        max-width: 100%
+// IMPORT SECTION
+@import reset

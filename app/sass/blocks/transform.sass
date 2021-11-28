@@ -1,0 +1,84 @@
+.transform
+    padding-top: 50px
+    display: grid
+    align-items: center
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: 0.3fr 1fr 1fr
+    gap: 50px 100px
+    grid-auto-flow: row
+    grid-template-areas: "transform__top transform__top" "transform__one transform__sec" "transform__three transform__four"
+    &__top
+        grid-area: transform__top
+        text-align: center
+        &-title
+            font-family: $font-merienda
+            font-size: 35px
+            font-weight: normal
+            padding-bottom: 20px
+        &-desc
+            font-family: $font-heebo
+            color: #777
+    &__one
+        grid-area: transform__one
+        & img
+            &:hover
+                animation: transimg 3s ease infinite
+    &__sec
+        grid-area: transform__sec
+        transition: 4s
+        &:hover
+            transition: 2s ease
+            transform: translate(-20px)
+    &__three
+        grid-area: transform__three
+        transition: 4s
+        &:hover
+            transition: 2s ease
+            transform: translate(20px)
+    &__four
+        grid-area: transform__four
+        & img
+            &:hover
+                animation: transimg 3s ease infinite
+    &-background
+        background-image: url('/images/transbck.png')
+        background-size: cover
+        background-repeat: no-repeat
+        background-position: center center
+    &__desc
+        font-family: $font-heebo
+        padding-bottom: 30px
+        & p
+            width: 90%
+    &__title
+        font-family: $font-heebo
+        font-size: 25px
+        padding-bottom: 20px
+@keyframes transimg
+    0%
+        transform: skew(-5deg, 5deg)
+    25%
+        transform: skew(5deg, -5deg)
+    50%
+        transform: skew(-5deg, 5deg)
+    75%
+        transform: skew(5deg, -5deg)
+    100%
+        transform: skew(-5deg, 5deg)
+
+@media screen and (max-width:768px)
+    .transform
+        grid-template-areas: "transform__top"  "transform__one" "transform__sec" "transform__four" "transform__three" 
+        grid-template-columns: 1fr
+        grid-template-rows: 0.3fr 1fr 1fr 1fr 1fr
+        gap: 20px 0px
+        &__sec
+            margin-left: 10px
+            margin-right: 10px
+        &__three
+            margin-left: 10px
+            margin-right: 10px
+            text-align: right
+        &__desc
+            & p
+                width: 100%
