@@ -21,7 +21,7 @@ const headerLogo = document.querySelectorAll(".header__logo");
 headerLogo.forEach((el) => {
             el.onclick = () => {
                 headerNav.forEach((le) => {
-                    le.classList.add('hide');
+                    le.classList.toggle("hide");
 })
 }
 });
