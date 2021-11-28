@@ -56,6 +56,8 @@ header
     100%
       transform: translateX(0)
 @media screen and (max-width: 992px)
+    header
+      height: 70px
     .header
         flex-direction: column
         &__navigation
@@ -67,6 +69,8 @@ header
             justify-content: center
         &__logo
             display: flex
+            justify-content: center
+            align-items: center
             & img
                 width: 70px 
     .hide
@@ -76,8 +80,9 @@ header
     .fide
         display: none
     .sticky
+        height: 70px
         width: 100%
-        background-color: #fff
+        background-color: #ffffff
         position: fixed
         top: 0
         z-index: 99999

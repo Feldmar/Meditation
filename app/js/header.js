@@ -1,3 +1,6 @@
+// import $ from 'jquery'; window.jQuery = $; window.$ = $ // import jQuery module (npm i -D jquery)
+
+// require('~/app/libs/mmenu/js/jquery.mmenu.all.min.js') // import vendor jQuery plugin example (not module)
 window.onscroll = function() {myFunction()};
 
 const header = document.getElementById("myHeader");
