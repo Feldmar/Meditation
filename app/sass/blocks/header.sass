@@ -58,15 +58,25 @@ header
 @media screen and (max-width: 992px)
     .header
         flex-direction: column
-        
         &__navigation
             display: none
+            background-color: #fff
+            z-index: 9999
+            flex: 100% 
+            flex-wrap: wrap
+            justify-content: center
+        &__logo
+            display: flex
+            & img
+                width: 70px 
     .hide
         display: flex
+        justify-content: center
+        align-items: center
     .fide
-        display: block
+        display: none
     .sticky
-        border: 2px solid #c2c2c2
+        width: 100%
         background-color: #fff
         position: fixed
         top: 0
